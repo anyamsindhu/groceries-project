@@ -1,0 +1,68 @@
+<body>
+<h2 align="center">VEGETABLES</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-3"  *ngIf="tomatoes">
+      <div class="tomatoes">
+      <p> <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/5/13/0/FN_tomatoes-thinkstock_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371616351150.jpeg" alt="Greenhouse Tomatoes | Food Network Healthy Eats: Recipes, Ideas, and Food  News | Food Network" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 181px; height: 181px; margin: 0px;">
+        <p>available quantity : {{data['vegetables']['tomatoes']}}</p>
+        <p><button (click)="qupdate('tomatoes')"> ADD TO CART</button> </p>
+      </div>
+    </div>
+    <div class="col-3"  *ngIf="onions">
+      <div class="tomatoes">
+        <p> <img src="https://www.thoughtco.com/thmb/q_mXCoQzbVeZln1zhipGlJ-5rRo=/2296x1291/smart/filters:no_upscale()/full-frame-shot-of-onions-in-market-stall-562386223-59b97e59845b340010f8d76e.jpg" alt="The Essential Onion in French Food Inspired a Key Idiom" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 181px; height: 181px; margin: 0px;">
+        <p>available quantity : {{data['vegetables']['onions']}}</p>
+        <p><button (click)="qupdate('onions')"> ADD TO CART</button> </p>
+      </div>
+    </div>
+    <div class="col-3"  *ngIf="potatoes">
+      <div class="tomatoes">
+        <p> <img src="https://images.heb.com/is/image/HEBGrocery/000318982" alt="Fresh White Potatoes - Shop Vegetables at H-E-B" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 181px; height: 181px; margin: 0px;"></p>
+        <p>available quantity : {{data['vegetables']['patatoes']}}</p>
+        <p><button (click)="qupdate('patatoes')"> ADD TO CART</button> </p>
+      </div>
+    </div>
+    <div class="row">
+      <h2 align="center">FRUITS</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3"  *ngIf="apples">
+      <div class="tomatoes">
+        <p> <img src="https://images.heb.com/is/image/HEBGrocery/000466634" alt="Honeycrisp Apples - Shop Fruit at H-E-B" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 181px; height: 181px; margin: 0px;"></p>
+        <p>Available quantity : {{data['fruits']['apples']}}</p>
+        <p><button (click)="qupdate('apples')"> ADD TO CART</button> </p>
+      </div>
+    </div>
+
+    <div class="col-3"  *ngIf="bananas">
+      <div class="tomatoes">
+        <p><img src="https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bananas-218094b-scaled.jpg" alt="The health benefits of bananas | BBC Good Food" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 181px; height: 181px; margin: 0px;"></p>
+        <p>available quantity : {{data['fruits']['bananas']}}</p>
+        <p><button (click)="qupdate('bananas')"> ADD TO CART</button> </p>
+      </div>
+    </div>
+      <div class="col-3"  *ngIf="kiwi">
+        <div class="tomatoes">
+          <p><img src="https://i5.walmartimages.com/asr/ea2f1505-0449-4d67-b4b4-d64294748ab5_2.ccee6b1b5876b8a7d2ef2395829076ad.jpeg?odnHeight=612&amp;odnWidth=612&amp;odnBg=FFFFFF" alt="Bulk Kiwi - Walmart.com" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 181px; height: 181px; margin: 0px;"></p>
+          <p>available quantity : {{data['fruits']['kiwi']}}</p>
+          <p><button (click)="qupdate('kiwi')"> ADD TO CART</button> </p>
+         </div>
+      </div>
+    <div class="col-3"  *ngIf="oranges">
+      <div class="tomatoes">
+        <p> <img src="https://www.halegroves.com/images/xl/buy-navel-oranges-online-123020.jpg?v=100009971701-2" alt="Florida Navel Oranges - Hale Groves - Ship Florida Oranges" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 181px; height: 181px; margin: 0px;"></p>
+         <p>available quantity : {{data['fruits']['oranges']}}</p>
+        <p><button (click)="qupdate('oranges')"> ADD TO CART</button> </p>
+      </div>
+    </div>
+ </div>
+  <div class="row button-pos">
+   <div  *ngIf="cart">
+      <button  routerLink="CartComponent" (click)="sendtocart()"> go to cart ( {{cart}} )</button>
+    </div>
+  </div>
+</div>
+
+</body>

@@ -1,0 +1,25 @@
+p
+{
+background: lightyellow;
+width: 100px;
+border-radius: 20px;
+}
+h2
+{
+color: red;
+}
+.cart-border
+{
+border-style: solid;
+border-color: black;
+border-radius: 50px;
+border-right: hidden;
+width: 20%;
+padding-left: 20px;
+}
+.button-pos
+{
+border-style: hidden;
+padding-left: 80px;
+
+}

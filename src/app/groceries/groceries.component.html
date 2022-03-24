@@ -1,0 +1,39 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-1">
+    </div>
+
+    <div class="col-3">
+      <div class="carrotssalign">
+      <p><img src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg" alt="Carrot" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 164px; height: 181px; margin: 0px;"></p>
+      <h4>{{cprice | currency: 'USD'}}</h4>
+        <p> Available quantity : {{cavailable}}</p>
+      <p><button (click)="cupdate()"> ADD TO CART</button> </p>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="applesalign">
+        <p> <img src="https://images.heb.com/is/image/HEBGrocery/000466634" alt="Honeycrisp Apples - Shop Fruit at H-E-B" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 181px; height: 181px; margin: 0px;"></p>
+
+        <p><button> ADD TO CART</button> </p>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="bananasalign">
+        <p><img src="https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bananas-218094b-scaled.jpg" alt="The health benefits of bananas | BBC Good Food" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 199.123px; height: 181px; margin: 0px;"></p>
+        <p><button> ADD TO CART</button> </p>
+      </div>
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+
+  <div class="row">
+    <div  class="button-pos" *ngIf="cart" style="align: right">
+      <button style="background: yellow; align: center"> go to cart ( {{cart}} )</button>
+    </div>
+  </div>
+
+</div>
+
