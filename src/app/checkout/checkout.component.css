@@ -1,0 +1,10 @@
+.btn-checkout
+{
+ width: 150px;
+    background-color: rgb(65, 100, 127);
+    border-color: rgb(65, 202, 127);
+    color: white;
+    justify-content: center;
+    padding: 2vh 0;
+    margin-top: 3vh
+}

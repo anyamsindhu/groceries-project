@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ApirequestComponent } from './apirequest.component';
+import { PaymentoptionsComponent } from './paymentoptions.component';
 
-describe('ApirequestComponent', () => {
-  let component: ApirequestComponent;
-  let fixture: ComponentFixture<ApirequestComponent>;
+describe('PaymentoptionsComponent', () => {
+  let component: PaymentoptionsComponent;
+  let fixture: ComponentFixture<PaymentoptionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ApirequestComponent ]
+      declarations: [ PaymentoptionsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ApirequestComponent);
+    fixture = TestBed.createComponent(PaymentoptionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -14,26 +14,21 @@ export class ApiserviceService {
  {
  return this.http.get("https://mockservertradein.herokuapp.com/groceries");
  }
-  acount: number=0;
-      kcount: number=0;
-      bcount: number=0;
-      tcount: number=0;
-      pcount: number=0;
-      ocount: number=0;
-      oncount: number=0;
-      test: number=3;
-      count: number=0;
-     // map: HashMap<string, number>=new HashMap<string, number>();
 
-      cartdata(type: string)
+cardnumber:string="";
+name:string="";
+cart:number=0;
+      cartdata()
       {
+      return this.cart;
       }
 
      groceries: Grocery=new Grocery();
-    grocerydata(x:any, y:any)
+    grocerydata(x:any, y:any, cart:number)
     {
       this.groceries.vegetables=x;
       this.groceries.fruits=y;
+      this.cart=cart;
     }
 
     veggrocerycount()
@@ -45,5 +40,9 @@ export class ApiserviceService {
         return this.groceries.fruits;
         }
 
-
+    cardDetails(cardnumber:string,name:string)
+    {
+     this.cardnumber=cardnumber;
+     this.name=name;
+    }
 }

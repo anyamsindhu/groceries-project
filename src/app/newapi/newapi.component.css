@@ -45,3 +45,14 @@ border-radius: 12px;
   opacity: 0.9;
   cursor: not-allowed;
 }
+.width
+{
+width: 100px;
+margin-right:20px;
+}
+
+header
+{
+margin-top:20px;
+margin-bottom: 20px;
+}

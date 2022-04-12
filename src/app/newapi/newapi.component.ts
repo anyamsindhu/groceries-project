@@ -42,6 +42,7 @@ vegaddtocart(index: number)
 this.cart+=1;
 this.groceries.vegetables[index].chosencount+=1;
 
+
 }
 vegremovefromcart(index: number)
 {
@@ -63,8 +64,8 @@ this.cart-=1;
 
 sendtocart()
   {
-  this.service.grocerydata(this.groceries.vegetables, this.groceries.fruits);
-  this.router.navigate(['/payment']);
+  this.service.grocerydata(this.groceries.vegetables, this.groceries.fruits,this.cart);
+  this.router.navigate(['/cart']);
 
   }
 

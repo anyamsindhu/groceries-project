@@ -1,8 +1,8 @@
 <body>
 <header align="right">
-<button class="btn btn-outline-success my-2 my-sm-0 " type="submit"  routerLink="PaymentComponent" (click)="sendtocart()"> cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+<button class="btn btn-outline-success my-2 my-sm-0 width" type="submit"  routerLink="PaymentComponent" (click)="sendtocart()"> cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
-</svg>{{cart}}</button>
+</svg><span *ngIf="cart">{{cart}}</span></button>
 </header>
 
 <div class="container">
@@ -10,27 +10,33 @@
   <h2 align="center">Vegetables</h2>
   <div class="row">
     <div  *ngFor="let v of groceries.vegetables" class="col-3 box-align">
-   <h4> {{ v.name}} </h4>
-      <p> <img src="{{v.identifier}}" alt="{{v.image}}" width="100"  heigth= "100"></p>
-    <p style="color:coral">{{v.stock}}</p> <p>{{v.chosencount}}</p>
-      <div>
-        <p  *ngIf="v.stock=='instock'">
-          <button class="addcart" (click)="vegaddtocart(groceries.vegetables.indexOf(v))">+</button> {{v.chosencount}}<button class="addcart" (click)="vegremovefromcart(groceries.vegetables.indexOf(v))">-</button>
+   <h4  align="center"> {{ v.name}} </h4>
+      <p  align="center"> <img src="{{v.identifier}}" alt="{{v.image}}" width="100"  heigth= "100"></p>
+    <p  style="color:coral" align="center">{{v.stock}}</p>
+      <div >
+        <p  *ngIf="v.stock=='instock'" align="left">
+          <button class="addcart" (click)="vegaddtocart(groceries.vegetables.indexOf(v))">+</button> {{v.chosencount}}
+          <button class="addcart" *ngIf="v.chosencount<=0"  disabled>-</button>
+          <button class="addcart" *ngIf="v.chosencount>0" (click)="vegremovefromcart(groceries.vegetables.indexOf(v))">-</button>
         </p>
-        <p  *ngIf="v.stock=='out of stock'">
+        <p  *ngIf="v.stock=='out of stock'" align="center">
           <button class="addcart disabled"  disabled>+</button>  <button class="addcart disabled"  disabled>-</button>
         </p>
+
       </div>
     </div>
 </div>
   <h2 align="center">Fruits</h2>
   <div class="row">
     <div  *ngFor="let v of groceries.fruits" class="col-3 box-align">
-      <h4>{{ v.name}}</h4>
-      <p><img src="{{v.identifier}}"  alt="{{v.image}}"  width="100"  heigth= "100"></p>
-      <p style="color:coral">{{v.stock}}</p>
+      <h4 align="center">{{ v.name}}</h4>
+      <p align="center"> <img src="{{v.identifier}}"  alt="{{v.image}}"  width="100"  heigth= "100"></p>
+      <p style="color:coral" align="center">{{v.stock}}</p>
       <p  *ngIf="v.stock=='instock'">
-      <button class="addcart" (click)="fruitaddtocart(groceries.fruits.indexOf(v))">+</button> {{v.chosencount}}  <button class="addcart" (click)="fruitremovefromcart(groceries.fruits.indexOf(v))">-</button>
+      <button class="addcart" (click)="fruitaddtocart(groceries.fruits.indexOf(v))">+</button> {{v.chosencount}}
+        <button class="addcart" *ngIf="v.chosencount<=0"  disabled>-</button>
+        <button class="addcart" *ngIf="v.chosencount>0" (click)="fruitremovefromcart(groceries.fruits.indexOf(v))">-</button>
+
       </p>
       <p  *ngIf="v.stock=='out of stock'">
         <button class="addcart disabled"  disabled>+</button>  <button class="addcart disabled"  disabled>-</button>

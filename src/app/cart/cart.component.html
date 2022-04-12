@@ -1,7 +1,40 @@
-<div class="cart-border">
+<header>
+  <button class="btn-home" (click)="home()">home</button>
 
-<h2>In cart: </h2>
-<p></p>
-<div class="button-pos">
-  <button>continue to payment</button>
+</header>
+<div *ngIf="cart==0" class="card mt-50 mb-50 box"><h2>Cart is empty </h2> </div>
+
+<div *ngIf="cart" class="row">
+  <div class="col-6">
+    <div class="card mt-50 mb-50">
+      <div class="cart-border">
+        <div class="nav">
+          <ul class="mx-auto">
+            <li class="active"><h3> Shopping cart </h3>
+          </ul>
+        </div>
+        <div  *ngFor="let v of groceries.vegetables">
+          <div *ngIf="v.chosencount">
+            <p>  {{v.name}}  : {{v.chosencount}}</p>
+          </div>
+        </div>
+
+        <div  *ngFor="let v of groceries.fruits">
+          <div *ngIf="v.chosencount">
+            <p>  {{v.name}} : {{v.chosencount}}</p>
+          </div>
+        </div>
 </div>
+      </div>
+  </div>
+  <div class="col-6">
+    <div class="card mt-50 mb-50 box">
+      <div>
+        <button (click)="sendtopayment()" class="btn-checkout">continue to payment</button>
+      </div>
+  </div>
+
+</div>
+
+
+

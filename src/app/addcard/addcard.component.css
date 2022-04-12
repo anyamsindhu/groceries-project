@@ -61,6 +61,7 @@ body {
 }
 
 .active {
+
     font-weight: bold
 }
 
@@ -112,7 +113,8 @@ form .row-2 {
     outline: none;
     background-color: transparent;
     margin: 0;
-    padding: 0 0.8rem
+    padding: 0 0.8rem;
+    font-size:24px
 }
 
 form .row .row-2 {
@@ -224,29 +226,8 @@ input:focus:-ms-input-placeholder {
     margin-top: 3vh
 }
 
-.box
+.textsize
 {
-border-style:none;
-box-shadow:none;
-}
-
-h2
-{
-align:center;
-margin-top: 80px;
-color:grey;
-}
-
-header
-{
-margin-left:20px;
-}
-.btn-home
-{
-    width: 100px;
-    background-color: rgb(65, 100, 90);
-    color: white;
-    justify-content: center;
-    padding: 2vh 0;
-    margin-top: 3vh
+font-size: 20px;
+color: gray
 }

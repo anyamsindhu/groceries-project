@@ -175,13 +175,14 @@ form .row .col-2 {
 }
 
 .btn {
-    width: 100%;
+    width: 100px;
     background-color: rgb(65, 202, 127);
     border-color: rgb(65, 202, 127);
     color: white;
     justify-content: center;
     padding: 2vh 0;
-    margin-top: 3vh
+    margin-top: -20px;
+    margin-right:20px
 }
 
 .btn:focus {
@@ -249,4 +250,16 @@ margin-left:20px;
     justify-content: center;
     padding: 2vh 0;
     margin-top: 3vh
+}
+
+.bor
+{
+border: 1px solid;
+width: 200px
+}
+
+.btn-margin
+{
+margin-left: 330px;
+margin-top:-30px
 }

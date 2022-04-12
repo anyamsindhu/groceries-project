@@ -1,0 +1,50 @@
+
+<div class="row">
+  <div class="col-6">
+    <div class="card mt-50 mb-50">
+      <div class="nav">
+        <ul class="mx-auto">
+          <li class="active">Card added succesfully</li>
+        </ul>
+      </div>
+        <div class="row-1">
+          <div class="row row-2 fontsize"> Card holder name :  {{name}}</div>
+        </div>
+       <div class="row-1">
+           <div class="row row-2 fontsize">Card number :   {{cardnumber}} </div>
+       </div>
+       </div>
+    </div>
+      <div class="col-6">
+    <div class="card mt-50 mb-50">
+      <div class="nav">
+        <ul class="mx-auto">
+          <li class="active"><p> Summary </p>
+        </ul>
+      </div>
+      <div  *ngFor="let v of groceries.vegetables">
+        <div *ngIf="v.chosencount">
+          <p>  {{v.name}} : {{v.chosencount}}</p>
+        </div>
+      </div>
+      <div  *ngFor="let v of groceries.fruits">
+        <div *ngIf="v.chosencount">
+          <p>  {{v.name}} : {{v.chosencount}}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+    </div>
+
+
+<div class="row" align="center">
+  <footer>
+    <button class="btn-checkout" (click)="proceedToCheckout()"> Proceed To Checkout </button>
+  </footer>
+
+</div>
+
+

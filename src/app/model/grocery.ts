@@ -3,6 +3,7 @@ export class Base
 {
 chosencount: number=0;
 
+
 constructor(chosencount: number)
 {
 this.chosencount=chosencount;
